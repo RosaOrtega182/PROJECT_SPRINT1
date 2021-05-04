@@ -55,78 +55,66 @@
           </div>
         </div>
       </nav>
-
-  
-
-      <div class="container-fluid  mt-3">
-        
-      <div class="row">
-        
-        <div class="col-2">
-        
-          
-
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-          </ul>
-
-
-
-        </div>
-
-
-
-
-        <div class="col-10">
-          <div class="container-fluid">
-            <div class="row" id="cards">
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-
-
-
-     
-
-
     
 
- <template id="template-card">
-     
-  
-     <div class="col-10 mb-2 col-md-3">
-        <div class="card" >
-          
-                <img src="..." class="card-img-top" width="100px" height="280px">
-            
-            <div class="card-body d-flex flex-column" style="height:210px" >
-                
-                <h5 class="card-title">Titulo</h5>
-                <p class="card-text">Precio</p>
-                <a href="#" class="btn-item btn btn-primary mt-auto">Comprar</a>
-            </div>
-        </div>
-    </div>
-  </template>
+<div class="container">
+  <h1></h1>
+  <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id de Producto</th>
+        <th scope="col">Título item</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col"></th>
+        <th scope="col">Total de cada item</th>
+      </tr>
+    </thead>
+    <tbody id="items"></tbody>
+    <tfoot>
+      <tr id="footer">
+        <th scope="row" colspan="$"></th>
+      </tr>
+    </tfoot>
 
- <script type='module' src="app/productos.js"></script>
+  </table>
+</div>
 
-    
 
-<!-- BOOTSTRAP 5 JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-</body>
+      <template id="template-footer">
+       <th scope="row" colspan="2">
+        Total Productos 
+       </th> 
+       <td>10</td>
+       <td>
+          <button class="btn btn-danger btn-sm" id="vaciar carrito">
+            vaciar todo
+          </button>
+       </td>
+       <td class="font-weight-bold">$<span>$000</span></td>
+      </template>
+
+      <template id="template-carrito">
+        <tr>
+          <th scope="row">id</th>
+          <td>Conejo</td>
+          <td>MLM102345</td>
+          <td>
+            <!--<button class="btn btn-info btn-sm">
+              Agregar
+            </button>
+            <button class="btn btn-danger btn-sm">
+            Quitar
+            </button>-->
+          </td>
+          <td>$<span>500</span></td>
+        </tr>
+      </template>
+
+
+
+
+      <script type='module' src="app/UICarrito.js"></script>   
+
+  </body>
 </html>

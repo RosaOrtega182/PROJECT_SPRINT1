@@ -7,33 +7,17 @@
 
 
 
-var eventoUno= document.getElementById('btn-categorias');
-eventoUno.addEventListener("click",function()
+var eventoUno= document.getElementsByClassName('btn-categoria1');
+
+for(var i = 0; i < eventoUno.length; i++){
+
+eventoUno[i].addEventListener("click",function()
 {
-
-   alert("Hola");
-   window.open('productos.html?idCategoria=Aves','_self')
-  /* var palabra="Aves";
-   merLibre.getItems(palabra)
-   .then(response => 
-   {
-       
-      ui.cargarDatosCategorias(response);
-      console.log(response);
-      
-       
-   }
-   
-   );*/
+  
+ // alert(this.value);
+   window.open(`productos.html?idCategoria=${this.value}`,'_self');
+ 
 }
+);
 
-);  
-
-
-
-
-
-
-
-//Se dispara cuando el documento HTML ha sido cargado
-//document.addEventListener('DOMContentLoaded', fetchCategories);
+}

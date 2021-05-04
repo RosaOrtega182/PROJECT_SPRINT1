@@ -14,7 +14,32 @@
 
 #categorias
 {
-    background: #f1f1f1;
+   background-color: white;
     padding: 50px 0px 30px 0;
-    margin-top: 40px;
+   /* margin-top: 40px;*/
 }
+
+
+#patrocinador
+{
+  background: #ef32d9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,  #ef32d9, #89fffd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+    padding: 10px 0px 10px 0;
+   
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }

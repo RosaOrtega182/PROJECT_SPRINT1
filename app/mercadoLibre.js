@@ -10,11 +10,11 @@ export class MercadoLibre
    
 
 
-    getItems(keyword)
+    getItems(id_categoria)
     {
 
 
-        const url=`https://api.mercadolibre.com/sites/MLM/search?q=${keyword}&limit=10&include_filters=true`;
+        const url=`https://api.mercadolibre.com/sites/MLM/search?category=${id_categoria}`;
 
        return  fetch(url)
         .then(response =>response.json())
